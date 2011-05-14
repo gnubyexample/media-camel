@@ -1,0 +1,18 @@
+media-camel
+
+Python and Ruby scripts to rename media files.
+
+Scripts will get rid of spaces in filenames of ogg and mp3 files,
+and Camel Case things.
+
+Before: Various-Wonderful world sam cooke.ogg
+After: VariousWonderfulWorldSamCooke.ogg
+
+Before: Various-20th century boy t rex.ogg
+After: Various20thCenturyBoytRex.ogg
+
+ls *.ogg | ruby camel_case_no_space.rb
+ls *.ogg | ruby camel_case_no_space.rb 'mv' 'max'
+find . -type f -name '*.ogg' | ruby camel_case_no_space.rb 'mv' 'max'
+
+See included LICENSE file (GPL) regarding media-camel being free software.
